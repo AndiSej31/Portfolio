@@ -1,0 +1,135 @@
+/* All Format */
+* {
+  font-family: "Atomic Age", system-ui;
+}
+
+/* 
+#c7a925 -yellow
+#558957 -green
+#e8ddbe -beige
+#1a1a1a -black
+ */
+
+/* Body */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #558957;
+}
+
+/* Font */
+.atomic-age-regular {
+  font-family: "Atomic Age", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Navbar */
+.navbar .nav-list {
+  list-style-type: none;
+  overflow: hidden;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+}
+.navbarContent {
+  text-decoration: none;
+  text-decoration-line: none;
+  font-size: 1.2em;
+  color: #558957;
+  display: flex;
+  background-color: #1a1a1a;
+  float: left;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
+  width: calc(100% / 3);
+  height: 50px;
+}
+.navbarContent:visited {
+  color: #006600;
+}
+.navbarContent:hover {
+  background-color: #e8ddbe;
+  color: #558957;
+  text-shadow: 1px 1p 10px #c7a925;
+}
+/* Project1 */
+#project1 {
+  position: relative;
+  color: #e8ddbe;
+  width: 70%;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px #1a1a1a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+#project1::before {
+  content: "";
+  background-image: url("images/Project1-image.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+/* .project-link #arrow {
+  transform: translateX(10%);
+  transform: rotateY("45deg");
+} */
+.project-link {
+  border-radius: 10px;
+  padding: 5px;
+  margin: 5px;
+  text-decoration: none;
+
+  font-size: 1.3em;
+  color: #e8ddbe;
+  display: flex;
+  float: left;
+
+  flex-direction: row-reverse;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+#project1-link {
+  margin: 3px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.3em;
+  color: #e8ddbe;
+
+  display: flex;
+  float: left;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+#project1-link:hover {
+  text-shadow: #e8ddbe 1px 1px 10px;
+}
+#arrow {
+  overflow: visible;
+  transform: rotate(45deg);
+  margin-left: 5px;
+  filter: invert(89%) sepia(8%) saturate(500%) hue-rotate(10deg) brightness(95%)
+    contrast(85%);
+}
+#arrow:visited {
+  filter: invert(14%) sepia(100%) saturate(00%) hue-rotate(60deg)
+    brightness(100%) contrast(15%);
+}
+
+#project1-link:visited {
+  color: #e4cc8c;
+}
