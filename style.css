@@ -10,11 +10,17 @@
 #1a1a1a -black
  */
 
+/* MAIN PAGE*/
+
 /* Body */
-body {
+.index-body {
   margin: 0;
   padding: 0;
   background-color: #558957;
+  height: 100vh;
+  background-image: url("images/portfolio-background.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 /* Font */
@@ -34,7 +40,6 @@ body {
 }
 .navbarContent {
   text-decoration: none;
-  text-decoration-line: none;
   font-size: 1.2em;
   color: #558957;
   display: flex;
@@ -55,21 +60,60 @@ body {
   color: #558957;
   text-shadow: 1px 1p 10px #c7a925;
 }
-/* Project1 */
-#project1 {
+
+.projects-container {
+  display: flex;
+  flex-direction: column; /* Stack project elements vertically */
+  gap: 20px; /* Add space between project elements */
+  height: 100vh; /* Make the container take up the full height of the viewport */
+}
+
+#project1,
+#project2,
+#project3,
+#project4 {
   position: relative;
   color: #e8ddbe;
   width: 70%;
+  height: 15%;
   padding: 10px;
   margin: 10px;
   border-radius: 10px;
-  box-shadow: 5px 5px 10px #1a1a1a;
+  box-shadow: 5px 5px 10px #006600;
   display: flex;
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
 }
-#project1::before {
+.Project-titles {
+  text-shadow: #1a1a1a 2px 2px 1px, #1a1a1a -2px -2px 1px, #1a1a1a 2px -2px 1px,
+    #1a1a1a -2px 2px 1px;
+}
+.Project-descriptions {
+  text-shadow: #1a1a1a 2px 2px 1px, #1a1a1a -2px -2px 1px, #1a1a1a 2px -2px 1px,
+    #1a1a1a -2px 2px 1px;
+}
+#project1 {
+  align-self: flex-start; /* Align project1 to the left */
+}
+
+#project2 {
+  align-self: flex-end; /* Align project2 to the right */
+  box-shadow: -5px 5px 10px #006600;
+}
+#project3 {
+  align-self: flex-start; /* Align project3 to the center */
+  box-shadow: 5px 5px 10px #006600;
+}
+#project4 {
+  align-self: flex-end; /* Align project4 to the center */
+  box-shadow: -5px 5px 10px #006600;
+}
+
+#project1::before,
+#project2::before,
+#project3::before,
+#project4::before {
   content: "";
   background-image: url("images/Project1-image.jpg");
   background-size: cover;
@@ -82,42 +126,50 @@ body {
   height: 100%;
   z-index: -1;
 }
-/* .project-link #arrow {
-  transform: translateX(10%);
-  transform: rotateY("45deg");
-} */
-.project-link {
+#project2::before {
+  background-image: url("images/Project2-image.jpg");
+}
+#project3::before {
+  background-image: url("images/Project3-image.jpg");
+}
+#project4::before {
+  background-image: url("images/Project4-image.jpg");
+}
+
+.project-links {
+  display: flex;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  box-shadow: #006600 1px 1px 10px, #006600 -1px -1px 10px,
+    #006600 1px -1px 10px, #006600 -1px 1px 10px;
   border-radius: 10px;
-  padding: 5px;
-  margin: 5px;
-  text-decoration: none;
-
-  font-size: 1.3em;
-  color: #e8ddbe;
-  display: flex;
-  float: left;
-
-  flex-direction: row-reverse;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
 }
-#project1-link {
-  margin: 3px;
-  text-decoration: none;
-  text-align: center;
-  font-size: 1.3em;
-  color: #e8ddbe;
 
+#project1-link,
+#project2-link,
+#project3-link,
+#project4-link {
+  color: #e8ddbe;
+  margin-right: 10px; /* Add some space between the link and the arrow */
   display: flex;
-  float: left;
-  text-align: center;
-  justify-content: center;
+  text-decoration: none;
   align-items: center;
+  justify-content: center;
+  font-size: 1.4em;
 }
-#project1-link:hover {
+
+#project1-link:hover,
+#project2-link:hover,
+#project3-link:hover,
+#project4-link:hover {
   text-shadow: #e8ddbe 1px 1px 10px;
 }
+
+/* #project1-link:visited,
+#project2-link:visited {
+  color: #e4cc8c;
+} */
+
 #arrow {
   overflow: visible;
   transform: rotate(45deg);
@@ -125,11 +177,25 @@ body {
   filter: invert(89%) sepia(8%) saturate(500%) hue-rotate(10deg) brightness(95%)
     contrast(85%);
 }
-#arrow:visited {
-  filter: invert(14%) sepia(100%) saturate(00%) hue-rotate(60deg)
-    brightness(100%) contrast(15%);
+
+/* ABOUT PAGE */
+.about-body {
+  margin: 0;
+  padding: 0;
+  background-color: #558957;
+  height: 100vh;
+  background-image: url("images/about-background.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
-#project1-link:visited {
-  color: #e4cc8c;
+/* CONTACT PAGE */
+.contact-body {
+  margin: 0;
+  padding: 0;
+  background-color: #558957;
+  height: 100vh;
+  background-image: url("images/contact-background.jpg");
+  background-size: cover;
+  background-position: center;
 }
